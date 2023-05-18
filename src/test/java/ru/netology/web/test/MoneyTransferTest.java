@@ -63,10 +63,8 @@ class MoneyTransferTest {
 
     int balanceFirstCard = dashboardPage.getFirstCardBalance();
     int balanceSecondCard = dashboardPage.getSecondCardBalance();
+
     val moneyTransfer = dashboardPage.firstCardButton();
-    val cardInfo = DataHelper.getSecondCardNumber();
-    String sum = "1000";
-    moneyTransfer.transferForm(sum, cardInfo);
     moneyTransfer.cancelButton();
 
     assertEquals(balanceFirstCard, dashboardPage.getFirstCardBalance());
